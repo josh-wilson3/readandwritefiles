@@ -1,0 +1,6 @@
+append_philosophers.py
+clients.txt
+philosophers.txt
+read_clients.py
+read_philosophers.py
+write_philosophers.py
