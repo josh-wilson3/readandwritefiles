@@ -4,3 +4,4 @@ philosophers.txt
 read_clients.py
 read_philosophers.py
 write_philosophers.py
+*.txt
