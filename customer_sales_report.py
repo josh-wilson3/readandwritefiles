@@ -9,9 +9,18 @@ outfile.write(f"Customer ID, Total\n")
 
 next(csv_file)
 
+custid = '250'
+total = 0
+
 for rec in csv_file:
-    #print(rec[3], rec[4], rec[5])
-    total = float(rec[3]) + float(rec[4]) + float(rec[5])
+    if custid == rec[0]:
+        total += float(rec[3]) + float(rec[4]) + float(rec[5])
+        
+    else:
+        #write the customer id, total to the outfile
+        outfile.write(f"{rec[0]}, ${total:,.2f}\n")
+        custid = rec[0]
+        total = float(rec[3]) + float(rec[4]) + float(rec[5])
     
     outfile.write(f"{rec[0]}, ${total:,.2f}\n")
 
